@@ -45,6 +45,50 @@ include('includes/config.php');
 
 
     <div class="container">
+        <div class="rupes" style="background-color:#fff;" ; border-radius: 25px;>
+            <div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s"
+                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+                <div class="rup-left">
+                    <a href="offers.html"><i class="fa fa-usd"></i></a>
+                </div>
+                <div class="rup-rgt">
+                    <h3>UP TO Tk. 500 OFF</h3>
+                    <h4><a href="offers.html">Travel Smart with TRIUMPH TOURISM</a></h4>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s"
+                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+                <div class="rup-left">
+                    <a href="offers.html"><i class="fa fa-h-square"></i></a>
+                </div>
+                <div class="rup-rgt">
+                    <h3>UP TO 50% OFF</h3>
+                    <h4><a href="offers.html">ON HOTELS ACROSS THE WORLD</a></h4>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s"
+                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+                <div class="rup-left">
+                    <a href="offers.html"><i class="fa fa-mobile"></i></a>
+                </div>
+                <div class="rup-rgt">
+                    <h3>FLAT TK. 1000 OFF</h3>
+                    <h4><a href="offers.html">USE THE APP OFFER</a></h4>
+
+                </div>
+                <div class="clearfix" style="box-shadow: 10px 5px 5px teal; border-radius: 10px; border-radius: 10px">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
         <div class="holiday">
             <h3>Package List</h3>
             <b></b>
