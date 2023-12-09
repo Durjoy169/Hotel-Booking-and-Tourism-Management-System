@@ -94,7 +94,7 @@ include('includes/config.php');
 
 
 
-            <h3>Package List</h3>
+            <h3>Hotel List</h3>
             <b></b>
             <b></b>
             <b></b>
@@ -103,8 +103,8 @@ include('includes/config.php');
 
 
             <?php
-            # price=SELECT * from tbltourpackages WHERE PackagePrice BETWEEN '5000' AND '8000 '
-            # location=SELECT * from tbltourpackages WHERE PackageLocation like '$searched_name%''
+            # price=SELECT * from hoteltourhotels WHERE hotelPrice BETWEEN '5000' AND '8000 '
+            # location=SELECT * from hoteltourhotels WHERE hotelLocation like '$searched_name%''
 
             $searched_name = $_GET['searched_name'];
             $searched_price1 = intval($_GET['searched_price1']);
@@ -114,13 +114,13 @@ include('includes/config.php');
 
             if (isset($searched_name)) {
                 $sql
-                    = "SELECT * from tbltourpackages where PackageName like '%$searched_name%' ";
+                    = "SELECT * from hoteltourhotels where HotelName like '%$searched_name%' ";
             } elseif (isset($searched_location)) {
-                $sql = "SELECT * from tbltourpackages where PackageLocation like '%$searched_location%'";
+                $sql = "SELECT * from hoteltourhotels where HotelLocation like '%$searched_location%'";
             } elseif (isset($searched_price1) and (isset($searched_price2))) {
-                $sql = "SELECT * from tbltourpackages where PackagePrice between  $searched_price1 and $searched_price2";
+                $sql = "SELECT * from hoteltourhotels where HotelPrice between  $searched_price1 and $searched_price2";
             } else {
-                $sql = "SELECT * from tbltourpackages";
+                $sql = "SELECT * from hoteltourhotels";
             }
 
 
@@ -133,21 +133,21 @@ include('includes/config.php');
                 foreach ($results as $result) {    ?>
                     <div class="rom-btm" style="border-radius: 10px;">
                         <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-                            <img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage); ?>" class="img-responsive" alt="">
+                            <img src="admin/hotelimages/<?php echo htmlentities($result->HotelImage); ?>" class="img-responsive" alt="">
                         </div>
                         <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-                            <h4>Package Name: <?php echo htmlentities($result->PackageName); ?></h4>
-                            <h6 style="color:black;">Package Type : <?php echo htmlentities($result->PackageType); ?>
+                            <h4>Hotel Name: <?php echo htmlentities($result->HotelName); ?></h4>
+                            <h6 style="color:black;">Hotel Type : <?php echo htmlentities($result->HotelType); ?>
                             </h6>
-                            <p style="color:black;"><b>Package Location :</b>
-                                <?php echo htmlentities($result->PackageLocation); ?></p>
+                            <p style="color:black;"><b>hotel Location :</b>
+                                <?php echo htmlentities($result->HotelLocation); ?></p>
                             <p style="color:black;"> <b>Features</b>
-                                <?php echo htmlentities($result->PackageFetures); ?>
+                                <?php echo htmlentities($result->HotelFetures); ?>
                                 </pstyle=>
                         </div>
                         <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-                            <h5 style="color:black;"> <?php echo htmlentities($result->PackagePrice); ?> Tk</h5>
-                            <a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId); ?>" class="view">Details</a>
+                            <h5> <?php echo htmlentities($result->HotelPrice); ?> TK</h5>
+                            <a href="hotel-details.php?pkgid=<?php echo htmlentities($result->HotelId); ?>" class="view">Details</a>
                         </div>
                         <div class="clearfix" style="background-color:#ddd;  border-radius:4px; border-radius: 10px ; box-shadow: 10px 5px 5px teal;" ;">
                         </div>
@@ -157,7 +157,7 @@ include('includes/config.php');
             } ?>
 
 
-            <div><a href="package-list.php" class="view">View More Packages</a></div>
+            <div><a href="hotel-list.php" class="view">View More Hotels</a></div>
         </div>
         <div class="clearfix" style="box-shadow: 10px 5px 5px teal;"></div>
     </div>
